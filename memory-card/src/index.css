@@ -66,3 +66,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+h1 {
+  margin-left: 17px;
+}
+ul {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+li {
+  list-style: none;
+  border: solid #213547;
+  border-radius: 1.5em;
+}
