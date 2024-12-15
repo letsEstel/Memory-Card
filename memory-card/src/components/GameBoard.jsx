@@ -24,7 +24,8 @@ export default function GameBoard() {
     }
   }
 
-  function clickPic(pic) {
+  function clickPic(pic, event) {
+    event.currentTarget.blur();
     if (pic[1] == 0) {
       setScore(score + 1);
       if (score >= highest) {
@@ -58,11 +59,17 @@ export default function GameBoard() {
         <h1>Highest {highest}</h1>
         <ul>
           {card.map((pic) => (
-            <li key={pic[0]}>
+            <li
+              key={pic[0]}
+              tabIndex="0"
+              onKeyDown={(e) => {
+                if (e.key === " " || e.key === "Enter") clickPic(pic, e);
+              }}
+            >
               <img
                 src={`${pic[0]}`}
                 alt="Game Card"
-                onClick={() => clickPic(pic)}
+                onClick={(e) => clickPic(pic, e)}
               />
             </li>
           ))}

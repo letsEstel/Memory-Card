@@ -68,6 +68,9 @@ button:focus-visible {
   ul li {
     border: solid #213547;
   }
+  ul li:focus {
+    background-color: #213547;
+  }
 }
 
 h1 {
@@ -84,6 +87,9 @@ li {
   list-style: none;
   border: solid rgba(255, 255, 255, 0.87);
   border-radius: 1.5em;
+}
+li:focus {
+  background-color: rgba(255, 255, 255, 0.87);
 }
 
 ul {
