@@ -34,6 +34,7 @@ export default function GameBoard() {
       setCard(
         card.map((car) => {
           if (car == pic) {
+            //let it be read
             car[1] = 1;
             return car;
           } else return car;
@@ -68,7 +69,7 @@ export default function GameBoard() {
             >
               <img
                 src={`${pic[0]}`}
-                alt="Game Card"
+                alt={pic[2]}
                 onClick={(e) => clickPic(pic, e)}
               />
             </li>

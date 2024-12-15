@@ -164,7 +164,7 @@ export default async function GetImages(start, length) {
         `https://pokeapi.co/api/v2/pokemon/${pokemon}`
       );
       const data = await response.json();
-      return data.sprites.front_default;
+      return [data.sprites.front_default, pokemon];
     })
   );
 
