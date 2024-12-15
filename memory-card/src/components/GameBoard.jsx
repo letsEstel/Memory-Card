@@ -66,12 +66,9 @@ export default function GameBoard() {
               onKeyDown={(e) => {
                 if (e.key === " " || e.key === "Enter") clickPic(pic, e);
               }}
+              onClick={(e) => clickPic(pic, e)}
             >
-              <img
-                src={`${pic[0]}`}
-                alt={pic[2]}
-                onClick={(e) => clickPic(pic, e)}
-              />
+              <img src={`${pic[0]}`} alt={pic[2]} />
             </li>
           ))}
         </ul>
