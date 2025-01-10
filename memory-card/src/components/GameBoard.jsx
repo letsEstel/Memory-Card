@@ -5,9 +5,10 @@ export default function GameBoard() {
   const [card, setCard] = useState([]);
   const [highest, setHighest] = useState(0);
   const [load, setLoad] = useState(true);
+  const gameCardLength = 9;
   useEffect(() => {
     async function loadCards() {
-      const cardsData = await GameCards(9);
+      const cardsData = await GameCards(gameCardLength);
       setCard(cardsData);
       setLoad(false);
     }
@@ -52,6 +53,7 @@ export default function GameBoard() {
       );
     }
   }
+
   if (load) return <h1>Loading</h1>;
   else {
     return (
